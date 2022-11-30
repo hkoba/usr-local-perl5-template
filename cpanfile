@@ -2,4 +2,4 @@
 #
 # Sample cpanfile for /usr/local/perl5
 #
-# requires 'Mail::Milter::Authentication';
+requires 'Mail::Milter::Authentication';

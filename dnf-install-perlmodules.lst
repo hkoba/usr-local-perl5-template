@@ -1,1 +1,5 @@
+Crypt::OpenSSL::RSA
+Crypt::OpenSSL::Random
+Crypt::OpenSSL::X509
 Module::CPANfile
+XML::LibXML
