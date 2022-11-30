@@ -53,7 +53,7 @@ fi
 
 if (($#o_rebuild)); then
 
-    x $binDir/symlinks.zsh record
+    xx $binDir/symlinks.zsh record $o_dryrun
 
     x $sudo rm -rf $binDir/lib64/perl5/auto/**/*.(so|bs)(N)
     x $sudo rm -rf $binDir/{lib64,share}/perl5/*(N)
@@ -84,6 +84,8 @@ if (($#o_rebuild)); then
 fi
 
 x $cpm install $cpm_sudo -g "$@" || error=1
+
+xx $binDir/symlinks.zsh record $o_dryrun
 
 xx $sudo $binDir/slurp_bin_installed.zsh $o_dryrun
 

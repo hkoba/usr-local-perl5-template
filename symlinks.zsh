@@ -83,11 +83,13 @@ function cmd_record {
             echo 1>&2 $dn は存在しないのでスキップします
             continue
         }
-        (cd $dn && find -type l |
+        () {
+            x cp $1 $binDir/symlinks_$kind.lst
+        } =(cd $dn && find -type l |
                  xargs perl -e '
                    print join "\t", $_, qx(readlink -f $_) for @ARGV
                  '
-        ) > $binDir/symlinks_$kind.lst
+        )
     done
 }
 
