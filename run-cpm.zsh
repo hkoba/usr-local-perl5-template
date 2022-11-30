@@ -58,7 +58,8 @@ if (($#o_rebuild)); then
     x $sudo rm -rf $binDir/lib64/perl5/auto/**/*.(so|bs)(N)
     x $sudo rm -rf $binDir/{lib64,share}/perl5/*(N)
 
-    xx $sudo $binDir/dnf-install.zsh $o_yes $o_dryrun
+    # Option order matters!
+    xx $sudo $binDir/dnf-install.zsh $o_dryrun $o_rebuild $o_yes
 fi
 
 if (($#o_rebuild)); then
