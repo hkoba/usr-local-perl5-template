@@ -2,6 +2,7 @@
 
 This is a template to manage CPAN modules for system perl under /usr/local/perl5 with git.
 
+See [this article](https://hkoba.github.io/perl/adv2022/book/)(in Japanese) for details.
 
 ## SYNOPSIS
 
