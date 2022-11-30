@@ -85,6 +85,8 @@ fi
 
 x $cpm install $cpm_sudo -g "$@" || error=1
 
+xx $sudo $binDir/slurp_bin_installed.zsh $o_dryrun
+
 if ((error)); then
     echo cpm failed
     exit 1
